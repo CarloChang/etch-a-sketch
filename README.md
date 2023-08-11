@@ -6,3 +6,4 @@ Once it's done, the live preview will be down this description.
 
 ### Link to preview
 
+https://raw.githack.com/CarloChang/etch-a-sketch/main/index.html
