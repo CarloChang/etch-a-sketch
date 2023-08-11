@@ -1,5 +1,6 @@
 const container = document.querySelector('main');
 let gridCreated = false;
+let isDrawing = false;
 
 function removeGrid() {
     while(container.firstChild) {
@@ -33,11 +34,20 @@ function startGrid() {
             grid.classList.add('grid');
             miniContainer.appendChild(grid);
 
+            grid.addEventListener('mousedown', () => {
+                isDrawing = true;
+            });
+
             grid.addEventListener('mouseover', () => {
-                grid.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+                if (isDrawing) {
+                    grid.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+                }
             });
         }
     }
+    window.addEventListener('mouseup', () => {
+        isDrawing = false; // Mouse button is up, stop drawing
+    });
 
     gridCreated = true;
 }

@@ -11,11 +11,6 @@
     border: 1px solid black;
     flex-basis: 20%; /* Set the width of each grid cell to 20% */
     padding-bottom: 40%; /* Maintain a square aspect ratio */
-    transition: background-color 0.1s ease-in-out;
-}
-
-.grid:hover {
-    
 }
 
 .grid-parent {
